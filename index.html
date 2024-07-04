@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> sum of two numbers</title>
+    <style>
+        .container {
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            background-color: crimson;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 100px auto; 
+            max-width: 600px; 
+        }
+
+        .name {
+            font-size: 40px;
+            color: white;
+        }
+
+        .input-box {
+            width: 300px;
+            height: 30px;
+            margin: 20px 0px;
+            border-radius: 7px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .result {
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="name">Sum of Two Numbers</p>
+        <input type="number" class="input-box" id="input1" oninput="calculate()">
+        <input type="number" class="input-box" id="input2" oninput="calculate()">
+        <p class="result" id="result"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            const num1 = document.getElementById("input1").value;
+            const num2 = document.getElementById("input2").value;
+            const sum = parseInt(num1 || 0) + parseInt(num2 || 0);
+            const resultElement = document.getElementById("result");
+            resultElement.innerText = `Sum of ${num1} and ${num2} is ${sum}`;
+        }
+    </script>
+</body>
+
+</html>
+S
